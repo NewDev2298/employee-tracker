@@ -27,19 +27,19 @@ INSERT INTO role (title, salary, department_id)
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
     VALUES
-    ('Julius', 'Erving', , ),
-    ('Tim', 'Duncan', , ),
-    ('Dwyane', 'Wade', , ),
-    ('Candace', 'Parker', , ),
-    ('Earvin', 'Johnson', , ),
-    ('Chris', 'Paul', , ),
-    ('Chris', 'Bosh', , ),
-    ('Maya', 'Moore', , ),
-    ('Hakeem', 'Olajuwon', , ),
-    ('Kelsey', 'Plum', , ),
-    ('Stephen', 'Curry', , ),
-    ('Chris', 'Mullin', , ),
-    ('Breanna', 'Stewart', , ),
-    ('Lauren', 'Jackson', , ),
-    ('Dirk', 'Nowitzki', , )
-    ('Cheryl', 'Miller', , )
+    ('Julius', 'Erving', 1, 2),
+    ('Tim', 'Duncan', 2, null),
+    ('Dwyane', 'Wade', 3, 2),
+    ('Candace', 'Parker', 4, 6),
+    ('Earvin', 'Johnson', 5, 6),
+    ('Chris', 'Paul', 6, null),
+    ('Chris', 'Bosh', 7, null),
+    ('Maya', 'Moore', 8, 7),
+    ('Hakeem', 'Olajuwon', 9, 7),
+    ('Kelsey', 'Plum', 10, 7),
+    ('Stephen', 'Curry', 11, 13),
+    ('Chris', 'Mullin', 12, 13),
+    ('Breanna', 'Stewart', 13, null),
+    ('Lauren', 'Jackson', 14, 16),
+    ('Dirk', 'Nowitzki', 15, 16)
+    ('Cheryl', 'Miller', 16, null)
