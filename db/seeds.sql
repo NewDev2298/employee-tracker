@@ -1,6 +1,6 @@
 USE employees_db;
 INSERT INTO department (name)
-    VALUES
+VALUES
     ('HR'), 
     ('Accounting'),
     ('I.T.'), 
@@ -8,7 +8,7 @@ INSERT INTO department (name)
     ('Customer Relations'); 
 
 INSERT INTO role (title, salary, department_id)
-    VALUES
+VALUES
     ('Office Clerk', 75000, 1),
     ('Administrator', 100000, 1),
     ('Compliance Analyst', 75000, 1),
@@ -26,8 +26,8 @@ INSERT INTO role (title, salary, department_id)
     ('Phone Operator', 75000, 5),
     ('CRM', 100000, 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-    VALUES
+INSERT INTO employee (first_name, last_name, role_id, manager_id) 
+VALUES
     ('Julius', 'Erving', 1, 2),
     ('Tim', 'Duncan', 2, null),
     ('Dwyane', 'Wade', 3, 2),
