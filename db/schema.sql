@@ -6,7 +6,9 @@ USE employees_db;
 
 CREATE TABLE department(
     id INT NOT NULL PRIMARY KEY,
-    name VARCHAR(30)
+    name VARCHAR(30),
+    FOREIGN KEY (role)
+    REFERENCES role(department_id)
 );
 
 CREATE TABLE role(
@@ -14,6 +16,8 @@ CREATE TABLE role(
     title VARCHAR(30),
     salary DECIMAL NOT NULL,
     department_id INT 
+    FOREIGN KEY (employee)
+    REFERENCES employee(role_id)
 );
 
 CREATE TABLE employee(
@@ -21,5 +25,6 @@ CREATE TABLE employee(
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
-    manager_id INT
+    manager_id INT,
+    REFERENCES employee(manager_id)
 );
