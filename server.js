@@ -17,17 +17,23 @@ const options =  (type) => {
         case 'VIEW ALL DEPARTMENTS':{
             db.query('SELECT * FROM department', (err, department) => {
                 console.table(department);
+                init();
             });
-        }
+            break;
+        } 
         case 'VIEW ALL ROLES':{
             db.query('SELECT * FROM role', (err, role) => {
                 console.table(role);
+                init();
             });
+            break;
         }
         case 'VIEW ALL EMPLOYEES':{
             db.query('SELECT * FROM employee', (err, employee) => {
-                console.table(employee);  
+                console.table(employee);
+                init();  
             });
+            break;
         }
     };
 };
