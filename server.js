@@ -35,6 +35,30 @@ const options =  (type) => {
             });
             break;
         }
+        case 'ADD AN EMPLOYEE':{
+            prompt([
+            {
+                type: 'input',
+                name: 'first_name',
+                message: 'Please enter employee\s first name.',
+            },
+            {
+                type: 'input',
+                name: 'last_name',
+                message: 'Please enter employee\s last name.',
+            },
+            {
+                type: 'input',
+                name: 'role_id',
+                message: 'Please enter employee\s role id.',
+            },
+            {
+                type: 'input',
+                name: 'manager_id',
+                message: 'Please enter employee\s manager id.',
+            },
+        ]);
+        }
     };
 };
 
