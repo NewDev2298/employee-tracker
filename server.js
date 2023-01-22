@@ -10,7 +10,7 @@ const db = mysql.createConnection({
 });
 
 
-// INSTRUCTOR HELPED GUIDE SWITCH CASE FUNCTION
+// INSTRUCTOR HELPED GUIDE SWITCH CASE FUNCTION and PROMPT/THEN 
 
 const options =  (type) => {
     switch (type) {
@@ -31,3 +31,21 @@ const options =  (type) => {
         }
     };
 };
+
+const init = () => {
+    prompt({
+        type: 'rawlist',
+        message: 'Pick an option.',
+        choices: [
+            'VIEW ALL DEPARTMENTS',
+            'VIEW ALL ROLES',
+            'VIEW ALL EMPLOYEES',
+        ],
+        name: 'type'
+    })
+    .then((answers) => {
+        options(answers.type);
+    });
+}
+
+init();
