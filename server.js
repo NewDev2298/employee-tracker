@@ -36,7 +36,7 @@ const options =  (type) => {
             break;
         }
         case 'ADD AN EMPLOYEE':{
-            prompt([
+            const newEmployee = prompt([
             {
                 type: 'input',
                 name: 'first_name',
@@ -56,8 +56,10 @@ const options =  (type) => {
                 type: 'input',
                 name: 'manager_id',
                 message: 'Please enter employee\s manager id.',
-            },
+            }
         ]);
+
+
         }
     };
 };
