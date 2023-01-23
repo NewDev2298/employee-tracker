@@ -57,17 +57,14 @@ const options =  (type) => {
                 name: 'manager_id',
                 message: 'Please enter employee\s manager id.',
             }
-        ])
-
-            const newEmployeeData  =() => { db.query('INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)', [newEmployee.first_name, newEmployee.last_name, newEmployee.role_id, newEmployee.manager_id])  
-            }
+        ]).then(() => {
+            const newEmployeeData  =() => { db.query('INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)', [newEmployee.first_name, newEmployee.last_name, newEmployee.role_id, newEmployee.manager_id])}
 
             newEmployeeData();
             console.table(employee);
             init();
-            }
-   
-   
+        })
+    }
 };
 };
 
