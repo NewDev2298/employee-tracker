@@ -60,11 +60,55 @@ const options =  (type) => {
         ]).then((newEmployee) => {
             const newEmployeeData  =() => { db.query('INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)', [newEmployee.first_name, newEmployee.last_name, newEmployee.role_id, newEmployee.manager_id])}
 
-            newEmployeeData();
-            // console.table(employee);
-            init();
-        })
-    }
+                newEmployeeData();
+                // console.table(employee);
+                init();
+            });
+            break;
+        }
+
+        case 'ADD A DEPARTMENT':{
+            const newDepartment = prompt([
+            {
+                type: 'input',
+                name: 'name',
+                message: 'Please enter name for Department.',
+            }
+        ]).then((newDepartment) => {
+            const newDepartmentData  =() => { db.query('INSERT INTO department(name) VALUES(?)', [newDepartment.name])}
+
+                newDepartmentData();
+                init();
+            });
+            break;
+        }
+
+        case 'ADD A ROLE':{
+            const newRole = prompt([
+            {
+                type: 'input',
+                name: 'title',
+                message: 'Please enter job title.',
+            },
+            {
+                type: 'input',
+                name: 'salary',
+                message: 'Please enter role salary.',
+            },
+            {
+                type: 'input',
+                name: 'department_id',
+                message: 'Please add department id.',
+            }
+        ]).then((newRole) => {
+            const newRoleData  =() => { db.query('INSERT INTO role(title, salary, department_id) VALUES(?,?,?)', [newRole.title, newRole.salary, newRole.department_id])}
+
+                newRoleData();
+                init();
+            });
+            break;
+        }
+
 };
 };
 
@@ -76,7 +120,9 @@ const init = () => {
             'VIEW ALL DEPARTMENTS',
             'VIEW ALL ROLES',
             'VIEW ALL EMPLOYEES',
-            'ADD AN EMPLOYEE'
+            'ADD AN EMPLOYEE',
+            'ADD A DEPARTMENT',
+            'ADD A ROLE'
         ],
         name: 'type'
     })
